@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>关于 MK体育 · 轻快识别</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #fbfcfd;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.8;
+      color: #1e2a35;
+      display: flex;
+      justify-content: center;
+      padding: 3rem 1.2rem;
+    }
+
+    .page {
+      max-width: 680px;
+      width: 100%;
+    }
+
+    .hero-note {
+      font-size: 0.9rem;
+      letter-spacing: 0.04em;
+      color: #7a8a97;
+      margin-bottom: 2.5rem;
+      border-left: 3px solid #c0d0dc;
+      padding-left: 1.2rem;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.8rem;
+      color: #0b1c29;
+      line-height: 1.3;
+    }
+
+    h1 span {
+      font-weight: 600;
+      color: #1f4d6e;
+    }
+
+    .intro {
+      font-size: 1.05rem;
+      color: #2c3b47;
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+    }
+
+    .intro a {
+      color: #1f4d6e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+      transition: background 0.2s;
+    }
+
+    .intro a:hover {
+      background: #e3edf5;
+    }
+
+    .feature-headline {
+      font-size: 1.3rem;
+      font-weight: 450;
+      margin: 2.8rem 0 1.2rem 0;
+      color: #0b1c29;
+      border-bottom: 1px solid #dee7ef;
+      padding-bottom: 0.5rem;
+    }
+
+    .feature-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+      margin-bottom: 2.8rem;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px dashed #eaeef3;
+    }
+
+    .feature-item:last-child {
+      border-bottom: none;
+    }
+
+    .feature-icon {
+      display: inline-flex;
+      background: #eef4f9;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      color: #1f4d6e;
+      font-size: 0.9rem;
+    }
+
+    .feature-content {
+      flex: 1;
+    }
+
+    .feature-content strong {
+      display: block;
+      font-weight: 500;
+      font-size: 1rem;
+      margin-bottom: 0.2rem;
+      color: #0b1c29;
+    }
+
+    .feature-content p {
+      color: #415562;
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .scene-block {
+      background: #f2f7fb;
+      padding: 1.8rem 1.8rem;
+      border-radius: 16px;
+      margin: 2.5rem 0 2.2rem 0;
+    }
+
+    .scene-block h3 {
+      font-weight: 450;
+      font-size: 1.1rem;
+      color: #0b1c29;
+      margin-bottom: 0.8rem;
+    }
+
+    .scene-block p {
+      color: #314351;
+      font-size: 0.98rem;
+    }
+
+    .tip-line {
+      font-size: 0.95rem;
+      background: #ffffff;
+      padding: 0.8rem 1.5rem;
+      border-radius: 40px;
+      border: 1px solid #dce6ef;
+      color: #2f4356;
+      margin-bottom: 2.8rem;
+      display: inline-block;
+    }
+
+    .faq-mini {
+      margin-bottom: 3.2rem;
+    }
+
+    .faq-mini summary {
+      font-weight: 450;
+      cursor: pointer;
+      padding: 0.5rem 0;
+      color: #0b1c29;
+      border-bottom: 1px solid #e4ebf2;
+      list-style: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-mini summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-mini summary::before {
+      content: "▸";
+      margin-right: 0.6rem;
+      color: #7a93a8;
+      transition: transform 0.15s;
+    }
+
+    .faq-mini details[open] summary::before {
+      transform: rotate(90deg);
+    }
+
+    .faq-mini p {
+      margin: 0.5rem 0 1rem 1.8rem;
+      color: #3d5366;
+      font-size: 0.94rem;
+    }
+
+    .close-note {
+      border-top: 1px solid #dce6ef;
+      padding-top: 2rem;
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: #526d80;
+      line-height: 1.7;
+    }
+
+    .close-note a {
+      color: #1f4d6e;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #e4ebf2;
+      margin: 2.5rem 0 1.2rem;
+    }
+
+    .footer-meta {
+      font-size: 0.8rem;
+      color: #8f9eac;
+      margin-top: 2.2rem;
+    }
+
+    @media (max-width: 480px) {
+      body { padding: 2rem 1rem; }
+      h1 { font-size: 1.8rem; }
+      .feature-item { gap: 0.8rem; }
+      .scene-block { padding: 1.4rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="hero-note">一个轻量的用途识别页 · 从第一眼开始理解</div>
+
+    <h1>这里是 <span>MK体育</span></h1>
+
+    <div class="intro">
+      当你看到这个名字，很自然会想知道：这是什么平台？主要做什么？是否值得停留？  
+      这条线索并不复杂——<a href="https://wapmain-mksports.com">MK体育</a> 是一个聚合体育内容与服务的移动站点，定位清晰，界面直接，没有多余绕转。
+    </div>
+
+    <div class="feature-headline">· 快速识别 · 核心特点</div>
+
+    <div class="feature-grid">
+      <div class="feature-item">
+        <div class="feature-icon">🏟</div>
+        <div class="feature-content">
+          <strong>内容即入口</strong>
+          <p>首页以赛事、资讯、数据为主线，不堆砌无关模块。从打开页面到找到感兴趣的内容，只需两次点击以内。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">📱</div>
+        <div class="feature-content">
+          <strong>移动优先</strong>
+          <p>专为手机浏览器优化，文字清晰，按钮触控区域合理，不依赖额外下载。任何浏览器打开即用。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⚡</div>
+        <div class="feature-content">
+          <strong>低负担浏览</strong>
+          <p>页面结构轻量，没有过度动效与弹窗干扰。适合快速扫读赛程、比分或短评。</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🔍</div>
+        <div class="feature-content">
+          <strong>透明导航</strong>
+          <p>顶部和底部导航直接展示主要分区：足球、篮球、综合、数据。不需猜测菜单藏在哪。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="scene-block">
+      <h3>一个常见情景</h3>
+      <p>周末晚上，你打开手机想确认一场德甲的开球时间，或者瞄一眼湖人队的实时比分。你不希望先看一段视频广告，也不想知道平台有多少优惠活动。你只是要一个干净、直接的结果——<a href="https://wapmain-mksports.com" style="text-decoration: underline; text-underline-offset: 2px;">MK体育</a> 的首页恰好能承载这种期待。</p>
+    </div>
+
+    <div class="tip-line">
+      ⚡ 提示：本站不要求注册，直接浏览即可获取赛事信息。
+    </div>
+
+    <div class="faq-mini">
+      <details>
+        <summary>网站主要提供什么类型的体育内容？</summary>
+        <p>覆盖足球、篮球、网球、电子竞技等主流项目的赛程、即时比分、简短战报与联赛积分。内容更新节奏偏向实时与日更。</p>
+      </details>
+      <details>
+        <summary>是否需要登录或安装应用？</summary>
+        <p>不需要。所有内容在移动浏览器中直接展示，无强制下载或注册门槛。</p>
+      </details>
+      <details>
+        <summary>界面语言是否只有中文？</summary>
+        <p>以中文为主，队伍和联赛名称保留通用英文缩写或官方中文译名，兼顾习惯与识别。</p>
+      </details>
+    </div>
+
+    <div class="close-note">
+      总结来说，如果你需要的只是一个没有冗余、直接提供体育信息的移动页面，那么 <a href="https://wapmain-mksports.com">MK体育</a> 会让你觉得清爽。它不承诺超出自身范围的东西，只是安静地做好体育内容聚合这件事。
+    </div>
+
+    <hr>
+
+    <div class="footer-meta">
+      MK体育 · 信息识别页 · 移动端优先
+    </div>
+  </div>
+</body>
+</html>
